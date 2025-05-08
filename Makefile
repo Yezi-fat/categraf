@@ -1,7 +1,7 @@
 .SILENT:
 .PHONY: build build-linux build-windows pack
 
-APP:=categraf
+APP:=Agnet
 ROOT:=$(shell pwd -P)
 GIT_COMMIT:=$(shell git --work-tree ${ROOT}  rev-parse 'HEAD^{commit}')
 _GIT_VERSION:=$(shell git --work-tree ${ROOT} describe --tags --abbrev=14 "${GIT_COMMIT}^{commit}" 2>/dev/null)
