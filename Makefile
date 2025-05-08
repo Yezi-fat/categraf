@@ -7,7 +7,7 @@ GIT_COMMIT:=$(shell git --work-tree ${ROOT}  rev-parse 'HEAD^{commit}')
 _GIT_VERSION:=$(shell git --work-tree ${ROOT} describe --tags --abbrev=14 "${GIT_COMMIT}^{commit}" 2>/dev/null)
 TAG=$(shell echo "${_GIT_VERSION}" |  awk -F"-" '{print $$1}')
 GIT_VERSION:="$(TAG)-$(GIT_COMMIT)"
-BUILD_VERSION:='flashcat.cloud/categraf/config.Version=$(GIT_VERSION)'
+BUILD_VERSION:='rhizoma-atractylodis/categraf/config.Version=$(GIT_VERSION)'
 LDFLAGS:="-w -s -X $(BUILD_VERSION)"
 STYLE_CHECK_GOFILE  := $$(find . -name '*.go')
 GO          := GO111MODULE=on go
