@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         Thanks for taking time to fill out this bug report! 
-        Please redirect any questions about categraf usage to our [Wechat Group](https://n9e.github.io/images/wx.jpg) we have a lot of talented community members there who could help answer your question more quickly.
+        Please redirect any questions about categraf usage to our [Wechat Group](https://dsj.github.io/images/wx.jpg) we have a lot of talented community members there who could help answer your question more quickly.
   - type: textarea
     id: config
     attributes:

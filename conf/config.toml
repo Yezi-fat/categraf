@@ -91,7 +91,7 @@ ignore_global_labels = false
 enable = false
 ## ibex flush interval
 interval = "1000ms"
-## n9e ibex server rpc address
+## dsj ibex server rpc address
 servers = ["127.0.0.1:20090"]
 ## temp script dir
 meta_dir = "./meta"
@@ -100,7 +100,7 @@ meta_dir = "./meta"
 enable = true
 
 # report os version cpu.util mem.util metadata
-url = "http://127.0.0.1:17000/v1/n9e/heartbeat"
+url = "http://127.0.0.1:17000/v1/dsj/heartbeat"
 
 # interval, unit: s
 interval = 10

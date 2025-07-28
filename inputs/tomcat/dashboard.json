@@ -2,7 +2,7 @@
     {
       "name": "Tomcat - 模板",
       "tags": "Categraf",
-      "configs": "{\"var\":[{\"name\":\"instance\",\"definition\":\"label_values(tomcat_up, instance)\"}],\"links\":[{\"title\":\"n9e\",\"url\":\"https://n9e.gitee.io/\",\"targetBlank\":true}]}",
+      "configs": "{\"var\":[{\"name\":\"instance\",\"definition\":\"label_values(tomcat_up, instance)\"}],\"links\":[{\"title\":\"dsj\",\"url\":\"https://dsj.gitee.io/\",\"targetBlank\":true}]}",
       "chart_groups": [
         {
           "name": "connector",

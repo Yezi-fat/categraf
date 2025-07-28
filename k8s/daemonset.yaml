@@ -4,10 +4,10 @@ kind: ClusterRole
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
     release: nightingale
-  name: n9e-categraf
+  name: dsj-categraf
 rules:
 - apiGroups:
   - ""
@@ -23,36 +23,36 @@ kind: ServiceAccount
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
     release: nightingale
-  name: n9e-categraf
+  name: dsj-categraf
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
     release: nightingale
-  name: n9e-categraf
+  name: dsj-categraf
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: n9e-categraf
+  name: dsj-categraf
 subjects:
 - kind: ServiceAccount
-  name: n9e-categraf
+  name: dsj-categraf
   namespace: ${CATEGRAF_NAMESPACE}
 ---
 apiVersion: v1
 kind: Secret
 metadata:
-  name: n9e-categraf
+  name: dsj-categraf
   namespace: ${CATEGRAF_NAMESPACE}
   annotations:
-    kubernetes.io/service-account.name: "n9e-categraf"
+    kubernetes.io/service-account.name: "dsj-categraf"
 type: kubernetes.io/service-account-token
 data:
   extra: YmFyCg==
@@ -110,7 +110,7 @@ data:
     
     [heartbeat]    
     enable = true    # report os version cpu.util mem.util metadata
-    url = "http://127.0.0.1:17000/v1/n9e/heartbeat"
+    url = "http://127.0.0.1:17000/v1/dsj/heartbeat"
     # interval, unit: s
     interval = 10
     # Basic auth username
@@ -214,7 +214,7 @@ data:
 
     [[instances]]
     # # append some labels for series
-    # labels = { region="cloud", product="n9e" }
+    # labels = { region="cloud", product="dsj" }
 
     # # interval = global.interval * interval_times
     # interval_times = 1
@@ -488,21 +488,21 @@ kind: DaemonSet
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
     release: nightingale
   name: nightingale-categraf
 spec:
   selector:
     matchLabels:
-      app: n9e
+      app: dsj
       component: categraf
       release: nightingale
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: n9e
+        app: dsj
         component: categraf
         release: nightingale
     spec:
@@ -579,7 +579,7 @@ spec:
           name: hostrofs
           readOnly: true
       dnsPolicy: ClusterFirstWithHostNet
-      serviceAccountName: n9e-categraf
+      serviceAccountName: dsj-categraf
       hostNetwork: true
       restartPolicy: Always
       schedulerName: default-scheduler

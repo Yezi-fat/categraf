@@ -21,7 +21,7 @@ kind: ClusterRole
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
   name: categraf-role
 rules:
@@ -47,7 +47,7 @@ kind: ServiceAccount
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
   name: categraf-serviceaccount
 ---
@@ -56,7 +56,7 @@ kind: ClusterRoleBinding
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
   name: categraf-rolebinding
 roleRef:

@@ -11,12 +11,12 @@
             {
                 "name": "cl_role",
                 "type": "query",
-                "definition": "label_values(mongodb_ss_uptime{cluster=~\"$cluster\", ident=~\"n9ecollector\"}, cl_role)"
+                "definition": "label_values(mongodb_ss_uptime{cluster=~\"$cluster\", ident=~\"dsjcollector\"}, cl_role)"
             },
             {
                 "name": "instance",
                 "type": "query",
-                "definition": "label_values(mongodb_ss_uptime{cluster=~\"$cluster\", ident=~\"n9ecollector\", cl_role=~\"$cl_role\"}, instance)",
+                "definition": "label_values(mongodb_ss_uptime{cluster=~\"$cluster\", ident=~\"dsjcollector\", cl_role=~\"$cl_role\"}, instance)",
                 "multi": false
             }
         ],

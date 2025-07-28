@@ -13,7 +13,7 @@ targets = [
 ]
 
 # # append some labels for series
-# labels = { region="cloud", product="n9e" }
+# labels = { region="cloud", product="dsj" }
 
 # # interval = global.interval * interval_times
 # interval_times = 1

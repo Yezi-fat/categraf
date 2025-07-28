@@ -8,7 +8,7 @@
 # interval_times = 1
 
 # append some labels to metrics
-# labels = { cluster="cloud-n9e-es" }
+# labels = { cluster="cloud-dsj-es" }
 
 # either /_nodes/stats or /_nodes/_local/stats depending on this setting
 local = false

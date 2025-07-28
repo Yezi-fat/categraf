@@ -4,20 +4,20 @@ kind: DaemonSet
 metadata:
   annotations: {}
   labels:
-    app: n9e
+    app: dsj
     component: categraf
     release: nightingale
   name: nightingale-categraf
 spec:
   selector:
     matchLabels:
-      app: n9e
+      app: dsj
       component: categraf
       release: nightingale
   template:
     metadata:
       labels:
-        app: n9e
+        app: dsj
         component: categraf
         release: nightingale
     spec:
@@ -71,7 +71,7 @@ MOUNTS
         - mountPath: /var/run/docker.sock
           name: docker-socket
       dnsPolicy: ClusterFirstWithHostNet
-      serviceAccountName: n9e-categraf
+      serviceAccountName: dsj-categraf
       hostNetwork: true
       restartPolicy: Always
       schedulerName: default-scheduler

@@ -7,7 +7,7 @@
 # timeout = 10
 
 # important! use global unique string to specify instance
-# labels = { instance="n9e-10.2.3.4:2181" }
+# labels = { instance="dsj-10.2.3.4:2181" }
 
 ## Optional TLS Config
 # use_tls = false

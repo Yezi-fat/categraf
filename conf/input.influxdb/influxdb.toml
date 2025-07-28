@@ -24,7 +24,7 @@ urls = [
 # interval_times = 1
 
 # important! use global unique string to specify instance
-# labels = { instance="n9e-10.2.3.4:6379" }
+# labels = { instance="dsj-10.2.3.4:6379" }
 
 ## Optional TLS Config
 # use_tls = false
