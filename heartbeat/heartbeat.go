@@ -211,7 +211,7 @@ func work(ps *system.SystemPS, client *http.Client) {
 	hr := HeartbeatResponse{}
 	err = json.Unmarshal(bs, &hr)
 	if err != nil {
-		log.Println("W! failed to unmarshal heartbeat response:", err, string(bs))
+		log.Println("W! failed to unmarshal heartbeat response:", err)
 		return
 	}
 	if len(hr.Data.NewVersion) != 0 && len(hr.Data.UpdateURL) != 0 && hr.Data.NewVersion != shortVersion && hr.Data.NewVersion != config.Version {
